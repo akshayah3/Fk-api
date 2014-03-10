@@ -1,5 +1,8 @@
 __author__ = 'Akshay'
 
+import BeautifulSoup as bs4
+import requests
+
 class Flipkart:
     global path = 'http://www.flipkart.com'
 
