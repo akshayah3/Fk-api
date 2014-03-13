@@ -21,9 +21,12 @@ class mobiles:
             request = requests.get(path + '/mobiles/' + mobile +'~brand/pr?sid=tyy,4io&otracker=hp_nmenu_sub_electronics_0_' + mobile)
             request = request.text
             response = bs.BeautifulSoup(request)
-            a = response.findAll('div', {'class': 'pu-title fk-font-13'})
-            print [all(str(i.text) for i in a)]
+            if number <= 21:
+                a = response.findAll('div', {'class': 'pu-title fk-font-13'})
+                print [all(str(i.text) for i in a)]
+            else:
 
 
-akshay = mobiles()
-akshay.get_mobiles('samsung')
+
+a = mobiles()
+a.get_mobiles('samsung')
